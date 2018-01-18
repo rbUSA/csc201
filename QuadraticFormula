@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class QuadraticFormula {
+    
+public static long discriminent(int a, int b, int c){
+    
+    return b*b - 4*a*c;
+    }
+    public static void main(String[] args) {
+       Scanner input = new Scanner (System.in);
+        
+       System.out.println("\n Enter any three integers for a, b, and c.");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+        long ds = discriminent(a,b,c);
+        
+        if (ds < 0)
+            System.out.println("\n There are no roots for this equation.");
+        
+        else if(ds == 0)
+            System.out.println ("\n There is one root to this equation. "+
+            (-b + Math.sqrt(b*b - 4*a*c)) / (2*a));
+        
+        else {
+            System.out.println("\n There are two roots to this equation."+
+            " Roots One:  "+ (-b + Math.sqrt(b*b - 4*a*c)) / (2*a)
+            + " Roots Two:  "+ (-b - Math.sqrt(b*b - 4*a*c)) / (2*a));
+        }
+    }
+    
+}
