@@ -1,0 +1,14 @@
+package feettometerconversion;import java.util.Scanner;public class FeetToMeterConversion {
+
+  public static void main(String[] args) {
+  
+    Scanner input = new Scanner (System.in);
+    
+    System.out.println("¥n Enter the numeber of feet you wish to convert to meters");
+    
+    double feet = input.nextDouble();double meters = (feet * .305);
+    
+    System.out.println("¥n This is " + meters "meters");        
+    }
+  
+  }
